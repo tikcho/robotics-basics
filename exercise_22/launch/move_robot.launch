@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="exercise_22" type="move_robot" name="move_robot_node" output="screen" />
+</launch>
