@@ -8,7 +8,7 @@ project(my_package)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
+  rospy
 )
 
 ## System dependencies are found with CMake's conventions
@@ -103,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES my_package
-#  CATKIN_DEPENDS roscpp
+#  CATKIN_DEPENDS rospy
 #  DEPENDS system_lib
 )
 
@@ -147,12 +147,6 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-
-add_executable(simple src/simple.cpp)
-add_dependencies(simple ${simple_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(simple
-   ${catkin_LIBRARIES}
- )
 
 #############
 ## Install ##
