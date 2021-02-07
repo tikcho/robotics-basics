@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="example_4_2" type="example_script.py" name="topic_subscriber" output="screen" />
+</launch>
